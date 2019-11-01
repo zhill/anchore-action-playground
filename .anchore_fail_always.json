@@ -1,0 +1,41 @@
+{
+    "blacklisted_images": [],
+    "description": "Always fail",
+    "id": "alwaysfail",
+    "mappings": [
+        {
+            "id": "0",
+            "image": {
+                "type": "tag",
+                "value": "*"
+            },
+            "name": "default",
+            "policy_id": "0",
+            "registry": "*",
+            "repository": "*",
+            "whitelist_ids": []
+        }
+    ],
+    "name": "alwaysfail",
+    "policies": [
+        {
+            "comment": "only one rule: fail",
+            "id": "0",
+            "name": "fail",
+            "rules": [
+                {
+                    "action": "STOP",
+                    "gate": "always",
+                    "id": "0",
+                    "params": [],
+                    "trigger": "always"
+                }
+            ],
+            "version": "1_0"
+        }
+    ],
+    "version": "1_0",
+    "whitelisted_images": [],
+    "whitelists": []
+}
+
