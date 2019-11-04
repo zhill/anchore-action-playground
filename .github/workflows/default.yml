@@ -16,7 +16,7 @@ jobs:
         fail-build: false
         debug: true
         custom-policy-path: .anchore_fail_always.json
-    - uses: actions/upload_artifact@master
+    - uses: actions/upload_artifact@v1.0.0
       with:
         name: content
         path: steps.scan.outputs.billofmaterials
