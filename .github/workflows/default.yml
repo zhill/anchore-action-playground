@@ -13,7 +13,7 @@ jobs:
       uses: anchore/anchore-scan-action@fullbillofmaterials
       with:
         image-reference: "test:latest"
-        fail-build: false
+        #fail-build: false
         debug: true
         custom-policy-path: .anchore_fail_always.json
     - uses: actions/upload-artifact@v1.0.0
