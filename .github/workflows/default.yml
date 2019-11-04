@@ -9,11 +9,17 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       run: docker build --tag test:latest .
-    - uses: anchore/anchore-scan-action@issue-7
+    - name: scan
+      uses: anchore/anchore-scan-action@fullbillofmaterials
       with:
         image-reference: "test:latest"
         fail-build: false
         debug: true
         custom-policy-path: .anchore_fail_always.json
+    - uses: actions/upload_artifact@master
+      with:
+        name: content
+        path: steps.scan.outputs.billofmaterials
+
 
 
