@@ -11,7 +11,7 @@ jobs:
       run: docker build --tag test:latest .
     - id: scan
       name: Scan Image
-      uses: anchore/anchore-scan-action@v1.0.0-RC0
+      uses: anchore/scan-action@v1.0.0
       with:
         image-reference: "test:latest"
         #fail-build: false
