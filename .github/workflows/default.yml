@@ -14,7 +14,7 @@ jobs:
       uses: anchore/scan-action@v1.0.1
       with:
         image-reference: "test:latest"
-        fail-build: false
+        fail-build: true
         #debug: true
         custom-policy-path: .anchore_fail_always.json
         #anchore-version: v0.5.2
