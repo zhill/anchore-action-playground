@@ -17,7 +17,7 @@ jobs:
         fail-build: false
         debug: true
         custom-policy-path: .anchore_fail_always.json
-        anchore-version: v0.5.2
+        #anchore-version: v0.5.2
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
