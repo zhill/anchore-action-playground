@@ -11,13 +11,14 @@ jobs:
       run: docker build --tag test:latest .
     - id: scan
       name: Scan Image
-      uses: anchore/scan-action@v1.0.1
+      uses: anchore/scan-action@v1.0.4
       with:
         image-reference: "test:latest"
         #fail-build: true
-        #debug: true
-        custom-policy-path: .anchore_fail_always.json
+        debug: true
+        #custom-policy-path: .anchore_fail_always.json
         #anchore-version: v0.5.2
+        include-app-packages: true
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
