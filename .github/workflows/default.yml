@@ -15,7 +15,7 @@ jobs:
       with:
         image: "docker.io/alpine:latest"
         #fail-build: true
-        debug: true
+        #debug: true
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
