@@ -13,12 +13,9 @@ jobs:
       name: Scan Image
       uses: anchore/scan-action@main
       with:
-        image-reference: "docker.io/alpine:latest"
+        image: "docker.io/alpine:latest"
         #fail-build: true
         debug: true
-        #custom-policy-path: .anchore_fail_always.json
-        #anchore-version: v0.5.2
-        include-app-packages: true
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
