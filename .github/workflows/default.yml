@@ -11,7 +11,7 @@ jobs:
     #  run: docker build --tag test:latest .
     - id: scan
       name: Scan Image
-      uses: anchore/scan-action@main
+      uses: anchore/scan-action@v2
       with:
         image: "docker.io/alpine:latest"
         #fail-build: true
