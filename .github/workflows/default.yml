@@ -11,17 +11,14 @@ jobs:
     #  run: docker build --tag test:latest .
     - id: scan
       name: Scan Image
-      uses: anchore/scan-action@v1.0.4
+      uses: anchore/scan-action@v2
       with:
-        image-reference: "docker.io/alpine:latest"
+        image: "docker.io/node:latest"
         #fail-build: true
-        debug: true
-        #custom-policy-path: .anchore_fail_always.json
-        #anchore-version: v0.5.2
-        include-app-packages: true
+        #debug: true
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
-        path: ${{ steps.scan.outputs.billofmaterials }}
+        path: ${{ steps.scan.outputs.vulnerabilities }}
         
 
