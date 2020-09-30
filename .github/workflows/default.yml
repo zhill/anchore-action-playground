@@ -19,6 +19,6 @@ jobs:
     - uses: actions/upload-artifact@v1.0.0
       with:
         name: content
-        path: ${{ steps.scan.outputs.billofmaterials }}
+        path: ${{ steps.scan.outputs.vulnerabilities }}
         
 
