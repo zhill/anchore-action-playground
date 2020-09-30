@@ -13,7 +13,7 @@ jobs:
       name: Scan Image
       uses: anchore/scan-action@v2
       with:
-        image: "docker.io/alpine:latest"
+        image: "docker.io/node:latest"
         #fail-build: true
         #debug: true
     - uses: actions/upload-artifact@v1.0.0
